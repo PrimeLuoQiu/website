@@ -1,0 +1,85 @@
+---
+title: "LUG @ NIT"
+excerpt: "宁夏理工学院-Linux 用户组"
+tagline: "宁夏理工学院-Linux 用户组"
+permalink: /
+layout: splash
+header:
+  overlay_image: "/static/splash/moutain.jpg"
+  overlay_filter: 0.25
+  actions:
+    - label: 了解更多
+      url: /wiki/intro/
+---
+
+<nav class="lug-nav">
+  <div class="nav-left">
+    <div class="link-group">
+      <div class="link-group-row">
+        <a href="https://mirror.nyist.edu.cn/" class="bg-microsoft-red">
+          <i class="fab fa-linux fa-5x" aria-hidden="true"></i>
+          <span>开源镜像站</span>
+        </a>
+        <a href="https://iptv.nyist.edu.cn/" class="bg-microsoft-green">
+          <i class="fad fa-tv fa-5x" aria-hidden="true"></i>
+          <span>IPTV</span>
+        </a>
+      </div>
+      <div class="link-group-row">
+        <a href="https://pxe.nyist.edu.cn/" class="bg-microsoft-blue">
+          <i class="fas fa-compact-disc fa-5x" aria-hidden="true"></i>
+          <span>PXE</span>
+        </a>
+        <a href="/wiki/cips/services" class="bg-microsoft-yellow">
+          <i class="fas fa-chevron-circle-right fa-5x" aria-hidden="true"></i>
+          <span>更多服务</span>
+        </a>
+      </div>
+    </div>
+  </div>
+  <div class="nav-right">
+    <div class="description">
+      <p>
+        宁夏理工学院 Linux 用户组（NIT Linux User Group, NIT LUG）是由一群对 GNU/Linux 及开源技术充满热情的学生组成的开放性组织。旨在通过学习和分享，宣传自由软件精神，推动 Linux 操作系统以及自由软件生态的应用和普及，帮助成员掌握 Linux 技能，搭建信息交流共享的平台。用。
+      </p>
+      <p>
+        在NIT LUG，我们定期举办技术沙龙、研讨会、技术分享会和实践活动，涵盖 Linux 基础、系统管理、系统开发等多个领域。无论你是 Linux 新手还是资深用户，我们都欢迎你的加入，一起探索和学习开源技术的无限可能。
+      </p>
+    </div>
+    <div class="link-group">
+      <div class="link-group-row">
+        <a href="/wiki/cips/events/calendar" class="fg-microsoft-red">
+          <i class="fad fa-calendar-alt fa-5x" aria-hidden="true"></i>
+          <span>活动日历</span>
+        </a>
+        <a href="/wiki/cips/contact" class="fg-microsoft-green">
+          <i class="fad fa-comments fa-5x" aria-hidden="true"></i>
+          <span>联系我们</span>
+        </a>
+      </div>
+      <div class="link-group-row">
+        <a href="/wiki/cips/finance/donate" class="fg-microsoft-blue">
+          <i class="fad fa-thumbs-up fa-5x" aria-hidden="true"></i>
+          <span>捐赠我们</span>
+        </a>
+        <a href="/wiki/cips/links" class="fg-microsoft-yellow">
+          <i class="fad fa-link fa-5x" aria-hidden="true"></i>
+          <span>友情链接</span>
+        </a>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<div class="archive-group">
+  <div class="archive-group__item">
+    <h3 class="archive__subtitle">
+      <a href="{{ "/news/" | relative_url }}">最新文章</a>
+    </h3>
+    {%- comment %} Don't concat planet as it may require auditing by tw. {% endcomment -%}
+    {% assign posts = site.news | sort: 'date' | reverse %}
+    {% for post in posts limit: 5 %}
+      {% include archive-single.html %}
+    {% endfor %}
+  </div>
+</div>
